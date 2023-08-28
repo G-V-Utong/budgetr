@@ -9,11 +9,11 @@ To complete the Expense tracker web application project, the following technolog
    - Languages: HTML, CSS, JavaScript
    - Platforms: Web browsers (Chrome, Firefox, etc.)
    - Frameworks: React
-   - 
+     
 ## Backend:
    - Language: Python
    - Framework: Flask
-   - 
+     
 ## Infrastructure
 - Branching and Merging: Use the GitHub flow for version control and collaboration among team members.
 - Deployment Strategy: With CI/CD to deploy the frontend and backend on GitHub Pages/ Netlify or Vercel.
