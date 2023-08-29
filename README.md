@@ -22,4 +22,4 @@ To complete the Expense tracker web application project, the following technolog
  
 ## Authors
 - Godswill Utong (Role: Front-End Development) github: https://github.com/G-V-Utong
-- Samuel Kenneth (Role: Back-End Development) github: https://github.com/logicalperson00
+- Samuel Kenneth (Role: Back-End Development) github: https://github.com/logicalperson0
