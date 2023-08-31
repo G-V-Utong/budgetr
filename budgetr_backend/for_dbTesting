@@ -1,0 +1,47 @@
+echo 'create Expense user_id="a289714d-8031-4f81-90a4-e5ba7a7c3bd6" amount=600 catagory="Rent" location="LA"' | budgetr_USER=budgetr_dev budgetr_PWD=budgetr_dev_pwd budgetr_HOST=localhost budgetr_DB=budgetr_dev_db budgetr_STORAGE=db ./console.py
+echo 'create Expense user_id="a289714d-8031-4f81-90a4-e5ba7a7c3bd6" amount=350 catagory="Food" location="LA"' | budgetr_USER=budgetr_dev budgetr_PWD=budgetr_dev_pwd budgetr_HOST=localhost budgetr_DB=budgetr_dev_db budgetr_STORAGE=db ./console.py
+
+echo 'create Expense user_id="43ba1000-57a7-4b0a-979d-cbdd77bf2392" amount=250 catagory="Food" location="LA"' | budgetr_USER=budgetr_dev budgetr_PWD=budgetr_dev_pwd budgetr_HOST=localhost budgetr_DB=budgetr_dev_db budgetr_STORAGE=db ./console.py
+
+echo 'all Expense' | budgetr_USER=budgetr_dev budgetr_PWD=budgetr_dev_pwd budgetr_HOST=localhost budgetr_DB=budgetr_dev_db budgetr_STORAGE=db ./console.py
+
+echo 'create Budget user_id="a289714d-8031-4f81-90a4-e5ba7a7c3bd6" amount=3000' | budgetr_USER=budgetr_dev budgetr_PWD=budgetr_dev_pwd budgetr_HOST=localhost budgetr_DB=budgetr_dev_db budgetr_STORAGE=db ./console.py
+
+echo 'all Budget' | budgetr_USER=budgetr_dev budgetr_PWD=budgetr_dev_pwd budgetr_HOST=localhost budgetr_DB=budgetr_dev_db budgetr_STORAGE=db ./console.py
+
+
+
+echo 'create Transaction description="AugustRent" expenses_id="2f969809-a850-4157-810d-197ca29d3bba"' | budgetr_USER=budgetr_dev budgetr_PWD=budgetr_dev_pwd budgetr_HOST=localhost budgetr_DB=budgetr_dev_db budgetr_STORAGE=db ./console.py
+echo 'all Transaction' | budgetr_USER=budgetr_dev budgetr_PWD=budgetr_dev_pwd budgetr_HOST=localhost budgetr_DB=budgetr_dev_db budgetr_STORAGE=db ./console.py
+
+echo 'create User email="gui@hbtn.io" password="guipwd" first_name="Guillaume" last_name="Snow"' | budgetr_USER=budgetr_dev budgetr_PWD=budgetr_dev_pwd budgetr_HOST=localhost budgetr_DB=budgetr_dev_db budgetr_STORAGE=db ./console.py
+echo 'all User' | budgetr_USER=budgetr_dev budgetr_PWD=budgetr_dev_pwd budgetr_HOST=localhost budgetr_DB=budgetr_dev_db budgetr_STORAGE=db ./console.py
+
+echo 'SELECT * FROM users\G' | mysql -ubudgetr_dev -p budgetr_dev_db
+
+echo 'SELECT * FROM expenses\G' | mysql -ubudgetr_dev -p budgetr_dev_db
+
+echo 'SELECT * FROM transactions\G' | mysql -ubudgetr_dev -p budgetr_dev_db
+
+echo 'SELECT * FROM budgets\G' | mysql -ubudgetr_dev -p budgetr_dev_db
+
+
+# for the api
+
+budgetr_USER=budgetr_dev budgetr_PWD=budgetr_dev_pwd budgetr_HOST=localhost budgetr_DB=budgetr_dev_db budgetr_STORAGE=db budgetr_API_HOST=0.0.0.0 budgetr_API_PORT=5000 python3 -m api.v1.app
+
+curl -X GET http://0.0.0.0:5000/api/v1/states/
+
+curl -X POST http://0.0.0.0:5000/api/v1/expenses/ -H "Content-Type: application/json" -d '{"user_id": "43ba1000-57a7-4b0a-979d-cbdd77bf2392", "amount": 550, "catagory": "Water", "location": "LA"}' -vvv
+
+curl -X POST http://0.0.0.0:5000/api/v1/expenses -H "Content-Type: application/json" -d '{"user_id": "43ba1000-57a7-4b0a-979d-cbdd77bf2392","amount": 550,"catagory": "Water","l
+ocation": "LA"}'
+
+curl -X PUT http://0.0.0.0:5000/api/v1/expenses/43ba1000-57a7-4b0a-979d-cbdd77bf2392 -H "Content-Type: application/json" -d {"amount": 55,"catagory": "Water","location": "LA"}'
+
+curl -X DELETE http://0.0.0.0:5000/api/v1/expenses/235c26c9-e5b5-4017-ad44-9c439bc0f1f4
+
+curl -X POST http://0.0.0.0:5000/api/v1/budgets -H "Content-Type: application/json" -d '{"user_id": "43ba1000-57a7-4b0a-979d-cbdd77bf2392","amount": 4550}'
+
+
+user_id="43ba1000-57a7-4b0a-979d-cbdd77bf2392" amount=250 catagory="Food" location="LA"

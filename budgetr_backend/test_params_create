@@ -1,0 +1,6 @@
+create Expense data="what"
+create Expense data="isgoin" user_id="5432" total_todate="4323"
+all Expense
+
+create Budget data="My_little_house" user_id="21"
+all Budget
