@@ -13,7 +13,6 @@ from models.transaction import Transaction
 from models.catagory import Catagory
 import shlex  # for splitting the line along spaces except in double quotes
 
-#from models.review import Review
 
 
 class BudgetrCommand(cmd.Cmd):
@@ -26,8 +25,6 @@ class BudgetrCommand(cmd.Cmd):
 
     __lists = ['BaseModel', 'User', 'Expense', 'Budget',
                'Tag', 'Transaction', 'Catagory']
-    """'User', 'Place', 'State'
-               'City', 'Amenity', 'Review']"""
 
     __methods_ac = ['all', 'count']
     __methods_sd = ['show', 'destroy']
@@ -143,7 +140,7 @@ class BudgetrCommand(cmd.Cmd):
     def do_show(self, arg):
         """Prints the string representation of an instance
         based on the class name and id
-        ex: show BaseModel 1234-1234-1234
+        ex: show User 1234-1234-1234
         """
         swargs = arg.split()
         """lists = ['BaseModel', 'User']"""
@@ -175,10 +172,10 @@ class BudgetrCommand(cmd.Cmd):
 
     def do_destroy(self, arg):
         """Deletes an instance based on the class name and id
-        ex: destroy BaseModel 1234-1234-1234
+        ex: destroy User 1234-1234-1234
         """
         swargs = arg.split()
-        """lists = ['BaseModel', 'User']"""
+        """lists = ['User']"""
 
         if len(swargs) == 0:
             print('** class name missing **')
@@ -207,7 +204,7 @@ class BudgetrCommand(cmd.Cmd):
     def do_all(self, arg):
         """prints all string representation of all
         instances based or not on the class name
-        ex: all BaseModel or all
+        ex: all User or all
         """
         args = shlex.split(arg)
         obj_list = []
@@ -244,10 +241,10 @@ class BudgetrCommand(cmd.Cmd):
     def do_update(self, arg):
         """Updates an instance based on the class name
         and id by adding or updating attribute
-        Ex: $ update BaseModel 1234-1234-1234
+        Ex: $ update User 1234-1234-1234
         email "aibnb@mail.com"
         All other arguments should not be used
-        Ex: $ update BaseModel 1234-1234-1234 email
+        Ex: $ update User 1234-1234-1234 email
         "aibnb@mail.com" first_name "Betty" =
         update BaseModel 1234-1234-1234 email "aibnb@mail.com"
         """
