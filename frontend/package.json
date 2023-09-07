@@ -17,7 +17,7 @@
     "styled-components": "^6.0.7",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "http://g-v-utong.github.io/budgetr",
+  //"homepage": "http://g-v-utong.github.io/budgetr",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
