@@ -1,9 +1,10 @@
 # Budgetr
 ## Introduction
 The genesis of this idea was rooted in our daily struggles to navigate the challenges of managing expenses amidst the relentless surge of inflation. Hours of brainstorming sessions, converged to guide us toward the path of creating an expense tracking application.We set out to develop an application that would provide users in Nigeria, Ethiopia, and beyond with a user-friendly platform to track, analyze, and gain valuable insights into their expenditures.
-[frontend/Budgetr screenshot.PNG]
+![Budgetr screenshot](https://github.com/G-V-Utong/budgetr/assets/94043309/90d7013b-b417-491a-a366-3ad57c9aff18)
 ### Deployed website
 The Budgetr app can be accessed here: https://budgetr-app.netlify.app/
+
 ### Authors: 
 Godswill Utong (https://www.linkedin.com/in/godswill-utong-acifc-acib-10252915b)
 Samuel Kenneth (https://www.linkedin.com/in/samuel-kenneth)
