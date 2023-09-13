@@ -34,3 +34,4 @@ To clone this repository and run on your local computer, for the backend, run py
 ## Contributors
 - Godswill Utong (Role: Front-End Development) github: https://github.com/G-V-Utong
 - Samuel Kenneth (Role: Back-End Development) github: https://github.com/logicalperson00
+## Licensing
