@@ -19,6 +19,7 @@ class Expense(BaseModel, Base):
         amount = Column(Integer)
         catagory = Column(String(255))
         location = Column(String(255))
+        transactions = relationship("Transaction", backref="expense")
     else:
         # id = ""
         user_id = 0

@@ -94,6 +94,27 @@ class DBStorage:
 
         return None
 
+    def getUserEmail(self, cls, email):
+        """ Retrieves an object by email """
+        if cls is User and email:
+            objs = self.all(cls)
+            for k, v in objs.items():
+                v = v.to_dict()
+                if v['email'] == email:
+                    return objs[k]
+        return None
+
+
+    def getUserpw(self, cls, email):
+        """ Retrieves a passwrd by email """
+        if cls is User and email:
+            objs = self.all(cls)
+            for k, v in objs.items():
+                v = v.to_dict()
+                if v['email'] == email:
+                    return v['password']
+        return None
+
     def count(self, cls=None):
         """
         count the number of objects in storage

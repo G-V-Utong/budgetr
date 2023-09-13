@@ -30,6 +30,8 @@ echo 'SELECT * FROM budgets\G' | mysql -ubudgetr_dev -p budgetr_dev_db
 
 budgetr_USER=budgetr_dev budgetr_PWD=budgetr_dev_pwd budgetr_HOST=localhost budgetr_DB=budgetr_dev_db budgetr_STORAGE=db budgetr_API_HOST=0.0.0.0 budgetr_API_PORT=5000 python3 -m api.v1.app
 
+budgetr_USER=budgetr_dev budgetr_PWD=budgetr_dev_pwd budgetr_HOST=localhost budgetr_DB=budgetr_dev_db budgetr_STORAGE=db budgetr_API_HOST=0.0.0.0 budgetr_API_PORT=5000 python3 -m web_budgetr.app
+
 curl -X GET http://0.0.0.0:5000/api/v1/states/
 
 curl -X POST http://0.0.0.0:5000/api/v1/expenses/ -H "Content-Type: application/json" -d '{"user_id": "43ba1000-57a7-4b0a-979d-cbdd77bf2392", "amount": 550, "catagory": "Water", "location": "LA"}' -vvv
