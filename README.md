@@ -35,3 +35,4 @@ To clone this repository and run on your local computer, for the backend, run py
 - Godswill Utong (Role: Front-End Development) github: https://github.com/G-V-Utong
 - Samuel Kenneth (Role: Back-End Development) github: https://github.com/logicalperson00
 ## Licensing
+To view the Budgetr License, please access it here: https://github.com/G-V-Utong/budgetr/blob/master/LICENSE
