@@ -9,3 +9,4 @@ from api.v1.views.index import *
 from api.v1.views.expenses import *
 from api.v1.views.users import *
 from api.v1.views.budgets import *
+from api.v1.views.transactions import *

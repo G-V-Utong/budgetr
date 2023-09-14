@@ -8,7 +8,7 @@ from sqlalchemy.orm import relationship
 from hashlib import md5
 from flask_login import UserMixin
 
-class User(BaseModel, Base, UserMixin):
+class User(UserMixin, BaseModel, Base):
     """Class User with:
     email, password, first_name, last_name
     class attributes in it

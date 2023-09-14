@@ -35,7 +35,7 @@ def transaction_by_expense(expense_id):
     return jsonify(expe)
 
 @app_views.route("/transactions/<transaction_id>",  methods=["GET"])
-def expense_by_id(transaction_id):
+def transaction_by_id(transaction_id):
     """
     gets a specific expense object by ID
     :param expense_id: expense object id
@@ -51,7 +51,7 @@ def expense_by_id(transaction_id):
 
 
 @app_views.route("/transactions", methods=["POST"])
-def expense_create():
+def transaction_create():
     """
     create expense route
     :return: newly created expense obj
@@ -74,7 +74,7 @@ def expense_create():
 
 
 @app_views.route("/transactions/<transaction_id>",  methods=["PUT"])
-def expense_put(transaction_id):
+def transaction_put(transaction_id):
     """
     updates specific Expense object by ID
     :param expense_id: expense object ID
@@ -99,7 +99,7 @@ def expense_put(transaction_id):
 
 
 @app_views.route("/transactions/<transaction_id>", methods=["DELETE"])
-def expense_delete_by_id(transaction_id):
+def transaction_delete_by_id(transaction_id):
     """
     deletes Expense by id
     :param expense_id: expense object id

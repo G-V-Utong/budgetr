@@ -4,10 +4,9 @@ from models import storage
 from models.user import User
 from uuid import uuid4
 from flask import Flask, send_from_directory, render_template, url_for, redirect, flash, request, current_app, abort
+# from flask import Flask, send_static_file
 from flask_login import login_user, LoginManager, login_required, logout_user, current_user
-#from flask_wtf import FlaskForm
-#from wtforms import StringField, PasswordField, SubmitField
-#from wtforms.validators import InputRequired, Length, ValidationError
+# from flask_appjs import AppJS
 # from flask_bcrypt import Bcrypt
 import secrets
 import os
@@ -113,7 +112,9 @@ def login():
 @login_required
 def index():
 
-    return render_template('first.html', user=current_user)
+    return render_template('app.html', user=current_user)
+    # return send_from_directory('static', 'src/App.js')
+    # return url_for('static', filename='App.js')
 
 # ...
 @app.route('/about/')
