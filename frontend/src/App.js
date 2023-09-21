@@ -31,7 +31,7 @@ function App() {
 
   return (
     <AppStyled bg={bg} className="App">
-      <Orb />
+      // <Orb />
       <MainLayout>
         <Navigation active={active} setActive={setActive} />
         <main>
