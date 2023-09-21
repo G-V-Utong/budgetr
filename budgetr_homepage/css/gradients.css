@@ -1,0 +1,33 @@
+.gradient {
+    position: absolute;
+    z-index: -1;
+}
+
+.gradient-md {
+    width: 199.104px;
+    height: 215.08px;
+    flex-shrink: 0;
+}
+.gradient-lg {
+    width: 271px;
+    height: 293px;
+    flex-shrink: 0;
+}
+
+.gradient-orange{
+    border-radius: 293px;
+    background: #EAC81F;
+    filter: blur(350px);
+}
+
+.gradient-green{
+    border-radius: 215.08px;
+    background: #067808;
+    filter: blur(350px);
+}
+
+.gradient-red{
+    border-radius: 215.08px;
+    background: var(--foundation-red-normal, #D60505);
+    filter: blur(350px);
+}
