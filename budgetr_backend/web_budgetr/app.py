@@ -12,6 +12,7 @@ import secrets
 import os
 from werkzeug.security import generate_password_hash, check_password_hash
 
+# app = Flask(__name__)
 app = Flask(__name__)
 # bcrypt = Bcrypt(app)
 app.config['SECRET_KEY'] = 'thisissecretkey'
@@ -68,10 +69,10 @@ def sign_up():
         """
         if user:
             flash("Email already exists!!", category='error')
-        elif len(email) < 4:
-            flash('Email must be greater than 3 characters.', category='error')
-        elif len(first_name) < 2:
-            flash('First name must be greater than 1 character.', category='error')
+        #elif len(email) < 4:
+         #   flash('Email must be greater than 3 characters.', category='error')
+        #elif len(first_name) < 2:
+         #   flash('First name must be greater than 1 character.', category='error')
         elif password1 != password2:
             flash('Passwords don\'t match.', category='error')
         elif len(password1) < 7:
@@ -109,12 +110,14 @@ def login():
     return render_template('login.html', user=current_user)
 
 @app.route('/', methods=['GET'])
-@login_required
+#@login_required
 def index():
 
-    return render_template('app.html', user=current_user)
-    # return send_from_directory('static', 'src/App.js')
-    # return url_for('static', filename='App.js')
+   return render_template('index.html', user=current_user)
+   #return send_from_directory('static', 'index.html')
+    #return url_for('static', filename='index.html')
+
+
 
 # ...
 @app.route('/about/')
